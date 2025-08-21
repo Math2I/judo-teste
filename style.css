@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /*Mudança de fontes (Google)*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap'); /* Fonte arredondada */
 
-
+/* --- Variáveis --- */
 :root {
   --azul: #181061;
   --amarelo: #fffb00;
@@ -12,7 +13,7 @@
   --destaque: #07800d;
 }
 
-
+/* --- Reset e base --- */
 * { box-sizing: border-box; }
 
 body {
@@ -30,33 +31,36 @@ body {
 header { background-color: #ffffff; }
 section { padding-bottom: 5rem; }
 
+/* --- Menu central ajustado --- */
 .menu-central {
   position: absolute;
   top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 6%;                 /* empurrado para a direita */
+  transform: none;           /* remove centralização */
   display: flex;
   gap: 2rem;
   list-style: none;
   margin: 0;
   padding: 0;
+  z-index: 1100;
 }
 
 .menu-central .nav-link {
   color: var(--azul);
-  font-weight: 700;
-  font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: 1px;
-  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: 'Quicksand', sans-serif; /* fonte arredondada */
+  font-size: 1.2rem;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.menu-central .nav-link:hover { color: var(--azul-claro); }
+.menu-central .nav-link:hover {
+  color: var(--destaque);
+}
 
-
+/* --- Fundo inicial --- */
 .inicio-fundo {
-  background-image: url('img/4965007.png'); /*MUDANÇA DE IMAGEM BACKGROUND PRINCIPAL*/
+  background-image: url('img/4965007.png'); 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -101,7 +105,6 @@ section { padding-bottom: 5rem; }
   z-index: 2;
 }
 
-
 .display-4 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 3rem;
@@ -109,18 +112,18 @@ section { padding-bottom: 5rem; }
   text-shadow: -3px 3px var(--amarelo);
 }
 
-
 .display-4 .boas-vindas {
   color: #ffffff;
   text-shadow: -3px 3px var(--azul-claro);
 }
 
+/* --- Seções --- */
 #Artemarcial:Judõ {
   position: relative;
   padding-top: 5rem;
   margin: 3rem 0;
-  background: url('img/flor.png') top right no-repeat, /*Mudança de imagem*/
-              url('img/flor-esquerda.png') bottom left no-repeat;/*mudança de imagem*/
+  background: url('img/flor.png') top right no-repeat,
+              url('img/flor-esquerda.png') bottom left no-repeat;
   background-size: 180px 180px;
 }
 
@@ -141,16 +144,15 @@ h2 {
 }
 
 #galeria { 
-  background-color: #94eb9b; /*cor do background da galeria*/
+  background-color: #94eb9b; 
   border-radius: 20px; 
   padding: 2rem;      
 }
 
 .fundo-galeria {
-  background: url('img/flor-bottom-direita.png') bottom right no-repeat; /*mudança de imagem*/
+  background: url('img/flor-bottom-direita.png') bottom right no-repeat; 
   background-size: 180px 180px;
 }
-
 
 #contato {
   background: none; 
@@ -183,7 +185,7 @@ h2 {
   font-weight: 500;
 }
 
-
+/* --- Menu de acessibilidade --- */
 .menu-acessibilidade { position: fixed; top: 20px; right: 20px; z-index: 1000; }
 
 #botao-acessibilidade {
@@ -199,6 +201,10 @@ h2 {
   font-family: 'Montserrat', sans-serif; 
   font-weight: 600;
   font-size: 1rem;
+  transition: transform 0.3s ease; 
+
+#botao-acessibilidade.rotacionado {
+  transform: rotate(180deg);
 }
 
 #opcoes-acessibilidade {
@@ -217,6 +223,7 @@ h2 {
 #opcoes-acessibilidade[hidden] { display: none !important; }
 #opcoes-acessibilidade.is-open { opacity: 1; transform: translateY(0); }
 
+/* --- Alto contraste --- */
 .alto-contraste {
   background-color: var(--alto-contraste-fundo);
   color: var(--alto-contraste-texto);
@@ -241,6 +248,7 @@ h2 {
 .alto-contraste #Artemarcial:Judõ,
 .alto-contraste #galeria,
 .alto-contraste .fundo-galeria { background: none; }
+
 
 
 
