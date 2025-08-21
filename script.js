@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
   if (!btn || !panel) return;
 
   panel.classList.remove('apresenta-lista');
-
   panel.setAttribute('hidden', '');
   btn.setAttribute('aria-expanded', 'false');
   btn.setAttribute('aria-controls', 'opcoes-acessibilidade');
@@ -15,12 +14,14 @@ document.addEventListener('DOMContentLoaded', function () {
     panel.classList.add('is-open');
     panel.removeAttribute('hidden');
     btn.setAttribute('aria-expanded', 'true');
+    btn.classList.add('rotacionado'); // rotação do botão
   };
 
   const close = () => {
     panel.classList.remove('is-open');
     panel.setAttribute('hidden', '');
     btn.setAttribute('aria-expanded', 'false');
+    btn.classList.remove('rotacionado'); // remove rotação
   };
 
   btn.addEventListener('click', function (e) {
@@ -68,3 +69,4 @@ if (typeof ScrollReveal !== 'undefined') {
   ScrollReveal().reveal('#galeria', { delay: 300, distance: '40px' });
   ScrollReveal().reveal('#contato', { delay: 300, distance: '40px' });
 }
+
