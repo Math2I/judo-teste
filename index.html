@@ -22,65 +22,8 @@
       rel="stylesheet"
     />
 
+    <!-- CSS principal -->
     <link rel="stylesheet" href="style.css" />
-
-    <style>
-      #botao-acessibilidade {
-        position: fixed;
-        top: 16px;
-        right: 16px;
-        z-index: 1050;
-      }
-      #opcoes-acessibilidade {
-        position: fixed;
-        top: 64px;
-        right: 16px;
-        display: none;
-        gap: 0.5rem;
-        z-index: 1049;
-      }
-      #opcoes-acessibilidade.mostrar {
-        display: flex;
-      }
-      header .nav {
-        margin-top: 0 !important;
-      }
-      .pt-6 {
-        padding-top: 3rem;
-      }
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-
-      /* 🔹 Ajuste dos botões de navegação */
-      .menu-central {
-        position: absolute;
-        top: 20px;
-        right: 10%;
-        transform: none;
-        display: flex;
-        gap: 2rem;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        z-index: 1100; /* fica acima do background */
-      }
-
-      /* 🔹 Fonte arredondada */
-      .menu-central .nav-link {
-        color: var(--azul, #181061);
-        font-weight: 600;
-        font-family: "Quicksand", sans-serif;
-        font-size: 1.2rem;
-        text-decoration: none;
-        transition: color 0.2s ease;
-      }
-
-      .menu-central .nav-link:hover {
-        color: var(--destaque, #07800d);
-      }
-    </style>
   </head>
 
   <body>
@@ -89,23 +32,25 @@
         class="container d-flex align-items-center justify-content-between"
         aria-label="Navegação principal"
       >
+        <!-- 🔹 Logo -->
         <a href="#inicio">
           <img
             src="img/logo2spik.png"
             class="logo-site"
-            alt="Logo Artemarcial:Judõ"
+            alt="Logo Artemarcial: Judõ"
             loading="lazy"
             decoding="async"
           />
         </a>
 
-        <!-- 🔹 Botões ajustados -->
+        <!-- 🔹 Botões do menu ajustados -->
         <ul class="nav menu-central">
           <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
           <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
           <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
         </ul>
 
+        <!-- 🔹 Menu de acessibilidade -->
         <div id="acessibilidade" class="menu-acessibilidade">
           <button
             id="botao-acessibilidade"
@@ -149,7 +94,7 @@
     </header>
 
     <main class="container my-5">
-      <!-- conteúdo do site segue igual -->
+      <!-- Conteúdo do site -->
     </main>
 
     <footer class="text-center p-3 fst-italic">
@@ -160,6 +105,7 @@
       <p class="mt-3">Arte Marcial - Judô.</p>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal.js/4.0.9/scrollreveal.min.js"></script>
     <script src="script.js"></script>
 
@@ -178,3 +124,4 @@
     </script>
   </body>
 </html>
+
