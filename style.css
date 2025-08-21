@@ -1,22 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /*Mudança de fontes (Google)*/
 
-/* ==========================
-   VARIÁVEIS DE CORES
-========================== */
+
 :root {
   --azul: #181061;
-  --azul-claro: #535ce4;
+  --amarelo: #fffb00;
   --alto-contraste-fundo: #000000;
   --alto-contraste-texto: #ffffff;
-  --alto-contraste-link: #ffd700;
-  --destaque: #2b35c2;
+  --alto-contraste-link: #3700ff;
+  --destaque: #07800d;
 }
 
-/* ==========================
-   CONFIGURAÇÕES GERAIS
-========================== */
+
 * { box-sizing: border-box; }
 
 body {
@@ -27,16 +23,13 @@ body {
 }
 
 :focus-visible {
-  outline: 3px solid var(--azul-claro);
+  outline: 3px solid var(--amarelo);
   outline-offset: 2px;
 }
 
 header { background-color: #ffffff; }
 section { padding-bottom: 5rem; }
 
-/* ==========================
-   MENU CENTRAL
-========================== */
 .menu-central {
   position: absolute;
   top: 20px;
@@ -61,11 +54,9 @@ section { padding-bottom: 5rem; }
 
 .menu-central .nav-link:hover { color: var(--azul-claro); }
 
-/* ==========================
-   SEÇÃO INÍCIO
-========================== */
+
 .inicio-fundo {
-  background-image: url('img/4965007.png');
+  background-image: url('img/4965007.png'); /*MUDANÇA DE IMAGEM BACKGROUND PRINCIPAL*/
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -110,33 +101,30 @@ section { padding-bottom: 5rem; }
   z-index: 2;
 }
 
-/* Título da seção início */
+
 .display-4 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 3rem;
   color: var(--azul);
-  text-shadow: -3px 3px var(--azul-claro);
+  text-shadow: -3px 3px var(--amarelo);
 }
 
-/* Apenas a frase "Boas-vindas a" em branco */
+
 .display-4 .boas-vindas {
   color: #ffffff;
   text-shadow: -3px 3px var(--azul-claro);
 }
 
-/* ==========================
-   SEÇÃO SPIKEPRO
-========================== */
-#SpikePro {
+#Artemarcial:Judõ {
   position: relative;
   padding-top: 5rem;
   margin: 3rem 0;
-  background: url('img/flor.png') top right no-repeat,
-              url('img/flor-esquerda.png') bottom left no-repeat;
+  background: url('img/flor.png') top right no-repeat, /*Mudança de imagem*/
+              url('img/flor-esquerda.png') bottom left no-repeat;/*mudança de imagem*/
   background-size: 180px 180px;
 }
 
-#SpikePro .container {
+#Artemarcial:Judõ .container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -153,21 +141,19 @@ h2 {
 }
 
 #galeria { 
-  background-color: #c8d8f0; 
+  background-color: #94eb9b; /*cor do background da galeria*/
   border-radius: 20px; 
   padding: 2rem;      
 }
 
 .fundo-galeria {
-  background: url('img/flor-bottom-direita.png') bottom right no-repeat;
+  background: url('img/flor-bottom-direita.png') bottom right no-repeat; /*mudança de imagem*/
   background-size: 180px 180px;
 }
 
-/* ==========================
-   CONTATO
-========================== */
+
 #contato {
-  background: none; /* <<< Removido o fundo com imagem */
+  background: none; 
   padding: 4rem 0;
 }
 
@@ -197,9 +183,7 @@ h2 {
   font-weight: 500;
 }
 
-/* ==========================
-   MENU DE ACESSIBILIDADE
-========================== */
+
 .menu-acessibilidade { position: fixed; top: 20px; right: 20px; z-index: 1000; }
 
 #botao-acessibilidade {
@@ -211,9 +195,9 @@ h2 {
   color: #fff;
   border: none;
   padding: .6rem 1rem;
-  border-radius: 12px; /* <<< mais arredondado */
-  font-family: 'Montserrat', sans-serif; /* <<< fonte mais legível */
-  font-weight: 600; /* <<< texto mais destacado */
+  border-radius: 12px; 
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 600;
   font-size: 1rem;
 }
 
@@ -233,9 +217,6 @@ h2 {
 #opcoes-acessibilidade[hidden] { display: none !important; }
 #opcoes-acessibilidade.is-open { opacity: 1; transform: translateY(0); }
 
-/* ==========================
-   ALTO CONTRASTE
-========================== */
 .alto-contraste {
   background-color: var(--alto-contraste-fundo);
   color: var(--alto-contraste-texto);
@@ -257,7 +238,7 @@ h2 {
   color: var(--alto-contraste-fundo);
 }
 
-.alto-contraste #SpikePro,
+.alto-contraste #Artemarcial:Judõ,
 .alto-contraste #galeria,
 .alto-contraste .fundo-galeria { background: none; }
 

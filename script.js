@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 if (typeof ScrollReveal !== 'undefined') {
   ScrollReveal().reveal('#inicio', { delay: 300, distance: '40px' });
-  ScrollReveal().reveal('#SpikePro', { delay: 300, distance: '40px' });
+  ScrollReveal().reveal('#Artemarcial:Judõ', { delay: 300, distance: '40px' });
   ScrollReveal().reveal('#galeria', { delay: 300, distance: '40px' });
   ScrollReveal().reveal('#contato', { delay: 300, distance: '40px' });
 }
