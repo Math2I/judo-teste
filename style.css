@@ -205,7 +205,7 @@ h2 {
 
 #botao-acessibilidade.rotacionado {
   transform: rotate(180deg);
-}
+}}
 
 #opcoes-acessibilidade {
   position: fixed;
